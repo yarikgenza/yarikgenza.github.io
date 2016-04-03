@@ -93,15 +93,18 @@ let added = true;
 }())
 
 var getSinglePokemon = (id) => {
-    event.preventDefault();
-    
+    $('.pokeImg').remove();
+    $('.pokeName').remove();
+    $('.table').remove();
+    $('.single-loader').fadeIn(0);
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://pokeapi.co/api/v1/pokemon/" + id, true);
     xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
+      $('.single-loader').fadeOut(0);
       renderSinglePokemon(JSON.parse(xhr.responseText));
-   }
   }
+ }
     xhr.send();
     
 }
