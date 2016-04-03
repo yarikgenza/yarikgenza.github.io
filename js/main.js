@@ -16,7 +16,7 @@
 ///////                  (((              (    )                )))
 ///////                   (((                                  )))
 ///////                    (((                                )))
-///////               ∧∧∧                                     ∧∧∧
+///////                ∧∧∧                                     ∧∧∧
 ///////              ∧    ∧                                  ∧     ∧
 ///////             ∧      ∧                                ∧       ∧
 ///////             ∧      ∧                                ∧       ∧
@@ -66,7 +66,6 @@ var delType = () => {
     $('.col-md-5').append('<div id="list"></div>');
     renderList(chunck);
 }
-
 //
 
 
@@ -100,8 +99,8 @@ var getSinglePokemon = (id) => {
     xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
       renderSinglePokemon(JSON.parse(xhr.responseText));
+   }
   }
- }
     xhr.send();
     
 }
@@ -128,7 +127,6 @@ var more = () => {
 var renderList = (data) => {
     
     $('#cbutton').remove();
-    
     
     //init next page url
     next = `https://pokeapi.co${data.meta.next}`;
