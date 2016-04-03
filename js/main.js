@@ -143,7 +143,7 @@ var renderList = (data) => {
        }
     
          // build template
-    renddata += `<a href='#' onclick='getSinglePokemon(${data.objects[i].national_id})'><div class='article' id='${data.objects[i].national_id}'> <img src='https://pokeapi.co/media/img/${data.objects[i].national_id}.png'></img><span class='name'>${data.objects[i].name}</span></a>${typesList}</div>`
+    renddata += `<a href='${data.objects[i].name}' onclick='getSinglePokemon(${data.objects[i].national_id})'><div class='article' id='${data.objects[i].national_id}'> <img src='https://pokeapi.co/media/img/${data.objects[i].national_id}.png'></img><span class='name'>${data.objects[i].name}</span></a>${typesList}</div>`
     
        typesList = '';
     }
