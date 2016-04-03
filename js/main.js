@@ -93,10 +93,11 @@ let added = true;
 }())
 
 var getSinglePokemon = (id) => {
-    $('.pokeImg').remove();
-    $('.pokeName').remove();
-    $('.table').remove();
-    $('.single-loader').fadeIn(0);
+    event.preventDefault();
+     $('.pokeImg').remove();
+     $('.pokeName').remove();
+     $('.table').remove();
+     $('.single-loader').fadeIn(0);
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://pokeapi.co/api/v1/pokemon/" + id, true);
     xhr.onreadystatechange = function() {
@@ -147,7 +148,7 @@ var renderList = (data) => {
        }
     
          // build template
-    renddata += `<a href='${data.objects[i].name}' onclick='getSinglePokemon(${data.objects[i].national_id})'><div class='article' id='${data.objects[i].national_id}'> <img src='https://pokeapi.co/media/img/${data.objects[i].national_id}.png'></img><span class='name'>${data.objects[i].name}</span></a>${typesList}</div>`
+    renddata += `<a href='#' onclick='getSinglePokemon(${data.objects[i].national_id})'><div class='article' id='${data.objects[i].national_id}'> <img src='https://pokeapi.co/media/img/${data.objects[i].national_id}.png'></img><span class='name'>${data.objects[i].name}</span></a>${typesList}</div>`
     
        typesList = '';
     }
