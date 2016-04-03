@@ -93,6 +93,7 @@ let added = true;
 }())
 
 var getSinglePokemon = (id) => {
+    event.preventDefault();
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://pokeapi.co/api/v1/pokemon/" + id, true);
