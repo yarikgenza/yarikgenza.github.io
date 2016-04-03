@@ -50,10 +50,12 @@ box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.55);
     height: 120px;
     margin: 10px;
 }
-#char{height: 20px; float: left; margin: 5%; width:40%; border-radius: 3px; 
+#char {
+    height: 20px; float: left; margin: 5%; width:40%; border-radius: 3px; 
     color: white;
     background: linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%)
-    border:1px solid black}
+    border:1px solid black;
+}
 
 .char_grass{background: #9bcc50}
 .char_poison{background: #b97fc9}
@@ -179,7 +181,10 @@ opacity: 1;
 #cbutton {
     margin: 25px;
 }
-#close{font-size:16px; float: left}
+#close {
+    font-size:16px;
+    float: left;
+}
 
 
 
